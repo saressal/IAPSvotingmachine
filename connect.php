@@ -1,8 +1,8 @@
 <?php
 
 $servername = "localhost";
-$username = "votermachine";
-$password = "galileo_galilei";
+$username = "";
+$password = "";
 $dbname = "votes";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 $logfile = "logs.txt";
@@ -11,7 +11,7 @@ if (! $conn) {
 	exit;
 }
 # Passwords
-$adminpass = sha1("a"); #"a";
+$adminpass = sha1(""); #"a";
 	//echo "<table>";
     //foreach ($_POST as $key => $value) {
         //echo "<tr>";
