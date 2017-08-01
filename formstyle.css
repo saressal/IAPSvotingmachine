@@ -1,0 +1,25 @@
+body {
+    font-family: Montserrat, sans-serif, Arial, serif;
+	background-color: #ffffff;
+}
+tr:hover {
+  background-color: #f1ead5;
+}
+fieldset {
+    border: 2px solid #0257a8;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
