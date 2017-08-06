@@ -41,10 +41,10 @@ if (isset($_POST["newvote"])) {
 
 	echo "<h3>Voting topic</h3>";
 	echo "<form action='$_SERVER[PHP_SELF]' method='POST'>";
-	echo "<input type='text' name='topic' required />";
+	echo "<input type='text' name='topic' maxlength='50' required />";
 	
 	echo "<h3>Vote description/explanation</h3>";
-	echo "<textarea rows='5' cols='70' name='desc'></textarea>";
+	echo "<textarea rows='5' cols='70' name='desc' maxlength='1000'></textarea>";
 	
 	echo "<h3>Vote duration</h3>";
 	echo "<input type='text' name='duration' onkeypress='return isNumber(event)' size='2'>";
@@ -72,7 +72,7 @@ if (isset($_POST["newvote"])) {
 	} else $n = (int)$_POST["options"];
 	
 	for ($i=1; $i <= $n; $i++) {
-		echo "<tr><td>Option $i</td><td><input type='text' name='option$i'></td></tr>";
+		echo "<tr><td>Option $i</td><td><input type='text' name='option$i' maxlength='90'></td></tr>";
 	}
 	echo "</table>";
 	echo "<input type='hidden' name='pass' value='".$_POST["pass"]."'>";

@@ -133,8 +133,8 @@ else {
 		echo "<form action='$_SERVER[PHP_SELF]' method='POST'>";
 		echo "<table rules='all'>";
 		echo "<tr><td><b>Name</b></td><td><b>Email</b></td><td><b>Status</b></td></tr>";
-		echo "<tr><td><input type='text' name='modifyName' value='$name' size='40' required></td>
-				<td><input type='email' name='modifyEmail' value='$email' size='40' required></td>
+		echo "<tr><td><input type='text' name='modifyName' value='$name' size='40' maxlength='90' required></td>
+				<td><input type='email' name='modifyEmail' value='$email' size='40' maxlength='90' required></td>
 				<td><select name='modifyStatus'>";
 		echo "<option value='NC'" . ($status === 'NC' ? "selected": "") .">National Committee</option>";
 		echo "<option value='LC'" . ($status === 'LC' ? "selected": "") .">Local Committee</option>";
@@ -204,8 +204,8 @@ else {
 		echo "<tr><td><b>Name</b></td><td><b>Email</b></td><td><b>Status</b></td></tr>";
 
 		for ($i=1;$i<=$n;$i++) {
-			echo "<tr><td><input type='text' name='voter".$i."name' size='40'></td>";
-			echo "<td><input type='email' name='voter".$i."email' size='40'></td>";
+			echo "<tr><td><input type='text' name='voter".$i."name' size='40' maxlength='90'></td>";
+			echo "<td><input type='email' name='voter".$i."email' size='40' maxlength='90'></td>";
 			echo "<td><select name='voter".$i."status'>";
 			echo "<option value='NC'>National Committee</option>";
 			echo "<option value='LC'>Local Committee</option>";
